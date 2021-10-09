@@ -1,5 +1,5 @@
-Task - 1 : Run a simple Dataflow job
-
+Task - 1 : 
+<copy from here>
 bq mk lab
 
 gsutil cp gs://cloud-training/gsp323/lab.csv .
@@ -8,16 +8,19 @@ cat lab.csv
 
 gsutil cp gs://cloud-training/gsp323/lab.schema .
 
-cat lab.schema
+cat lab.schema  
+
+<copy to here>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Task - 2 : Run a simple Dataproc job
-This has to be done mannually.
+Task - 2 and Task - 3 : 
+Refer To manual
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Task - 4 : AI
+Task - 4 : 
+<copy from here>
 
 gcloud iam service-accounts create my-natlang-sa \
   --display-name "my natural language service account"
@@ -37,10 +40,11 @@ gcloud auth login
 
 gsutil cp result.json gs://YOUR_PROJECT-marking/task4-cnl.result
 
+<Copy To here>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-export API_KEY={Replace with API KEY}
-
+export API_KEY=[Replace with API KEY]
+ 
 nano request.json
 
 
@@ -71,6 +75,7 @@ gcloud auth activate-service-account --key-file key.json
 export ACCESS_TOKEN=$(gcloud auth print-access-token)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ <Add this do not remove any thing just Add>
  
 nano request.json
 
@@ -82,11 +87,14 @@ nano request.json
 }
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<Copy from here>
 
 curl -s -H 'Content-Type: application/json' \
     -H "Authorization: Bearer $ACCESS_TOKEN" \
     'https://videointelligence.googleapis.com/v1/videos:annotate' \
     -d @request.json
+    
+
 
 
 
@@ -94,3 +102,7 @@ curl -s -H 'Content-Type: application/json' -H "Authorization: Bearer $ACCESS_TO
 
 
 gsutil cp result1.json gs://YOUR_PROJECT-marking/task4-gvi.result
+
+
+    
+<Copy To here>
